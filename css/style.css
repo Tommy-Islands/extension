@@ -1,0 +1,737 @@
+@charset "utf-8";
+
+
+@font-face {
+    font-family: 'Makinas';
+    src: url('../font/Makinas-4-Square.otf') format('opentype');
+}
+
+.mbt_10 {
+    margin-bottom: 10px;
+}
+
+.mbt_20 {
+    margin-bottom: 20px;
+}
+
+
+.mbt_30 {
+    margin-bottom: 30px;
+}
+
+.mbt_50 {
+    margin-bottom: 50px;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+body {
+    font-family: Makinas;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+/*---mobile------------------------------*/
+
+.intro {
+    background: #fff;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 5;
+}
+
+.intro .text {
+    width: 90%;
+    height: 300px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+.intro .text p {
+    font-size: 21pt;
+    line-height: 1.2;
+}
+
+.burger {
+    /*    display: block;*/
+    position: absolute;
+    /* 任意の親要素からの絶対位置指定 */
+    position: fixed;
+    /* fixedしたい場合*/
+    background: rgba(255, 255, 255, 0.56);
+    right: 8px;
+    top: 5px;
+    width: 45px;
+    height: 42px;
+    cursor: pointer;
+    /*    z-index: 3;*/
+    /*    background: #666;*/
+    text-align: center;
+    z-index: 4;
+}
+
+.burger span {
+    display: block;
+    position: absolute;
+    /* .burgerに対して絶対位置 */
+    width: 35px;
+    border-bottom: solid 4px #111;
+    -webkit-transition: .3s ease-in-out;
+    -moz-transition: .3s ease-in-out;
+    transition: .3s ease-in-out;
+    left: 5px;
+}
+
+
+
+.burger span:nth-child(1) {
+    top: 6px;
+}
+
+.burger span:nth-child(2) {
+    top: 19px;
+}
+
+.burger span:nth-child(3) {
+    top: 32px;
+}
+
+
+/* jqueryでクリックしたときにaddClassされるもので、最初のspanをマイナス45度に */
+
+.active span:nth-child(1) {
+    top: 20px;
+    left: 5px;
+    transform: rotate(-45deg);
+}
+
+/* 2番目と3番目のspanを45度に */
+.active span:nth-child(2),
+.active span:nth-child(3) {
+    top: 20px;
+    transform: rotate(45deg);
+}
+
+.nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 0;
+    height: 0;
+    background: rgba(252, 252, 252, 0.87);
+    z-index: 3;
+    transition: .2s;
+}
+
+.open {
+    width: 100%;
+    height: 100%;
+}
+
+.nav li:hover {
+    background: #59acff;
+    color: #fff;
+    border: dotted 1px #666;
+    box-sizing: border-box;
+}
+
+.nav ul {
+    position: absolute;
+    top: 30%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.nav li {
+    width: 40%;
+    padding: 10px 0;
+    text-align: center;
+    color: #111;
+    font-size: 10pt;
+    margin-bottom: 50px;
+}
+
+.t-container {
+    padding-bottom: 20px;
+}
+
+.header {
+    border-bottom: solid 3px #000;
+    margin-bottom: 20px;
+}
+
+.logo {
+    width: 50%;
+    margin: 0 auto;
+}
+
+.header {
+    border-bottom: solid 3px #000;
+    margin-bottom: 20px;
+}
+
+.logo {
+    width: 60%;
+    margin: 0 auto;
+}
+
+.main_contents {
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+.main_img {
+    width: 100%;
+}
+
+
+
+h2 {
+    font-size: 15pt;
+    border-bottom: solid 4px #d300db;
+    padding-bottom: 8px;
+}
+
+h3 {
+    font-size: 10pt;
+}
+
+.h2_head {
+    font-size: 1.2em;
+    color: #d300db;
+}
+
+.information table {
+    border-spacing: 10px;
+    width: 100%;
+}
+
+.information tr {
+    padding: 10px;
+}
+
+.information td {
+    padding: 10px;
+    font-size: 10pt;
+    width: 80%;
+    text-align: left;
+}
+
+.information th {
+    padding: 10px;
+    font-size: 10pt;
+    width: 15%;
+    text-align: left;
+}
+
+.cds {
+    width: 100%;
+}
+
+
+
+.item_grid {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.item_grid img {
+    margin-bottom: 10px;
+}
+
+.item_grid li p {
+    color: #000;
+    text-align: center;
+    font-size: 8pt;
+    line-height: 1.3;
+}
+
+.item_grid li {
+    width: 45%;
+    margin-bottom: 50px;
+}
+
+.top_item {
+    display: flex;
+    justify-content: space-between;
+}
+
+.top_item li {
+    width: 30%;
+}
+
+.top_item a img {
+    margin-bottom: 10px;
+}
+
+.cd_shadow {
+    box-shadow: 0 0 5px #000;
+}
+
+.top_item p {
+    text-align: center;
+    font-size: 5pt;
+    line-height: 1.2;
+}
+
+
+.cds,
+.goods {
+    margin-bottom: 30px;
+}
+
+.more {
+    width: 100%;
+}
+
+.more a {
+    width: 40%;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    text-decoration: none;
+    color: #000;
+    font-size: 10pt;
+    padding: 10px;
+    border: solid 3px #444;
+    transition: .5s;
+}
+
+.more a:hover {
+    color: #fff;
+    background: #444;
+}
+
+.tour-t {
+    width: 100%;
+    background: #bbb;
+}
+
+.tour-t img {
+    display: block;
+    width: 90%;
+    margin: 10px auto;
+    padding: 20px;
+}
+
+.tour-t p {
+    font-family: sans-serif;
+    font-size: 10pt;
+}
+
+.goods {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.footer {
+    width: 100%;
+    background: #111;
+    color: #fff;
+}
+
+.sns p {
+    font-size: 15pt;
+    text-align: center;
+    padding: 20px 0 10px 0;
+}
+
+.icons {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.icons li {
+    text-align: center;
+}
+
+.icons a img {
+    width: 60%;
+}
+
+.sitemap {
+    width: 100%;
+}
+
+.sitemap p {
+    font-size: 15pt;
+    text-align: center;
+}
+
+.sitemap ul {
+    width: 100%;
+    display: block;
+    justify-content: center;
+}
+
+.sitemap li {
+    margin: 20px;
+}
+
+
+
+.sitemap li a {
+    color: #fff;
+    font-size: 15pt;
+    text-align: center;
+    padding: 5px;
+}
+
+.sitemap li a:hover {
+    background: #fff;
+    color: #111;
+}
+
+.copy {
+    text-align: center;
+    padding: 20px;
+    font-family: sans-serif;
+    font-size: 10pt;
+}
+
+.dgraphy_main_img {
+    width: 100%;
+    height: 300px;
+    position: relative;
+}
+
+.dgraphy_main_img img {
+    height: 100%;
+    object-fit: cover;
+}
+
+.biography {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 90%;
+}
+
+.biography p {
+    font-size: 11pt;
+    color: #fff;
+    line-height: 1.5;
+    text-shadow: 0 0 4px #000;
+}
+
+.discographys ul {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+
+
+
+/*-------mobile end--------------------------*/
+
+
+@media screen and (min-width: 769px) {
+
+    .intro {
+        background: #fff;
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        z-index: 5;
+    }
+
+    .intro .text {
+        width: 70%;
+        height: 300px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+    }
+
+    .intro .text p {
+        font-size: 60pt;
+        line-height: 1.2;
+    }
+
+    .burger {
+        /*    display: block;*/
+        position: absolute;
+        /* 任意の親要素からの絶対位置指定 */
+        position: fixed;
+        /* fixedしたい場合*/
+        background: rgba(255, 255, 255, 0.56);
+        right: 10px;
+        top: 1%;
+        width: 55px;
+        height: 50px;
+        cursor: pointer;
+        /*    z-index: 3;*/
+        /*    background: #666;*/
+        text-align: center;
+        z-index: 4;
+    }
+
+    .burger span {
+        display: block;
+        position: absolute;
+        /* .burgerに対して絶対位置 */
+        width: 45px;
+        border-bottom: solid 5px #111;
+        -webkit-transition: .3s ease-in-out;
+        -moz-transition: .3s ease-in-out;
+        transition: .3s ease-in-out;
+        left: 5px;
+    }
+
+    .burger span:nth-child(1) {
+        top: 8px;
+    }
+
+    .burger span:nth-child(2) {
+        top: 22px;
+    }
+
+    .burger span:nth-child(3) {
+        top: 36px;
+    }
+
+
+    /* jqueryでクリックしたときにaddClassされるもので、最初のspanをマイナス45度に */
+
+    .active span:nth-child(1) {
+        top: 20px;
+        left: 5px;
+        transform: rotate(-45deg);
+    }
+
+    /* 2番目と3番目のspanを45度に */
+    .active span:nth-child(2),
+    .active span:nth-child(3) {
+        top: 20px;
+        transform: rotate(45deg);
+    }
+
+
+    .nav {
+        position: fixed;
+        right: 0;
+        width: 0;
+        height: 0;
+        background: rgba(252, 252, 252, 0.87);
+        z-index: 3;
+        transition: .2s;
+    }
+
+    .open {
+        width: 100%;
+        height: 100%;
+    }
+
+    .nav li:hover {
+        background: #59acff;
+        color: #fff;
+        border: dotted 1px #666;
+        box-sizing: border-box;
+    }
+
+    .nav ul {
+        position: absolute;
+        top: 40%;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .nav li {
+        width: 20%;
+        padding: 10px 0;
+        text-align: center;
+        color: #111;
+        font-size: 15pt;
+    }
+
+
+
+    .header {
+        border-bottom: solid 3px #000;
+        margin-bottom: 20px;
+    }
+
+    .logo {
+        width: 40%;
+        margin: 0 auto;
+    }
+
+    .main_contents {
+        max-width: 1100px;
+        margin: 0 auto;
+    }
+
+
+
+    h2 {
+        font-size: 30pt;
+        border-bottom: solid 4px #d300db;
+        padding-bottom: 8px;
+    }
+
+    h3 {
+        font-size: 20pt;
+    }
+
+    .h2_head {
+        font-size: 1.2em;
+        color: #d300db;
+    }
+
+    .information table {
+        border-spacing: 10px;
+        width: 100%;
+    }
+
+    .information tr {
+        padding: 10px;
+    }
+
+    .information td {
+        padding: 10px;
+        font-size: 15pt;
+        width: 80%;
+        text-align: left;
+    }
+
+    .information th {
+        padding: 10px;
+        font-size: 15pt;
+        width: 15%;
+        text-align: left;
+    }
+
+    .more a {
+        font-size: 20pt;
+    }
+
+    .cds,
+    .goods {
+        margin-bottom: 80px;
+    }
+
+    .jacket p {
+        font-size: 15pt;
+    }
+
+
+    .top_item p {
+        font-size: 15pt;
+    }
+
+
+    .footer {
+        width: 100%;
+        background: #111;
+        color: #fff;
+    }
+
+    .sns p {
+        font-size: 20pt;
+        text-align: center;
+        padding: 20px 0 10px 0;
+    }
+
+    .icons {
+        width: 60%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .icons li {
+        text-align: center;
+    }
+
+    .icons a img {
+        width: 50%;
+    }
+
+
+    .sitemap {
+        width: 100%;
+    }
+
+    .sitemap p {
+        font-size: 20pt;
+        text-align: center;
+    }
+
+    .sitemap ul {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .sitemap li {
+        padding: 5px 40px;
+    }
+
+
+
+    .sitemap li a {
+        color: #fff;
+        font-size: 15pt;
+        text-align: center;
+        padding: 10px;
+    }
+
+
+    .dgraphy_main_img {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+
+    .biography {
+        position: absolute;
+        top: 50px;
+        left: 50px;
+    }
+
+    .biography p {
+        font-size: 20pt;
+        color: #fff;
+        line-height: 1.5;
+        text-shadow: 0 0 4px #000;
+    }
+
+    .discographys ul li p {
+        font-size: 15pt;
+    }
+
+    .item_grid li {
+        width: 30%;
+        margin-bottom: 50px;
+    }
+
+
+    .items ul li p {
+        font-size: 15pt;
+    }
+
+}
